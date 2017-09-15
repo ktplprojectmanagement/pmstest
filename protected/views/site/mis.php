@@ -154,21 +154,21 @@ var d = new Date(2017, 09, 01);
 $(document).ready(function(){
     
    
-    $("#pers_info").click(function(){
-         if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').addClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#pers_info").attr("href", "#");
-        }
-    });
+    // $("#pers_info").click(function(){
+    //      if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').addClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#pers_info").attr("href", "#");
+    //     }
+    // });
     $("#genrl_info").click(function(){
         if($('#err').text()==""){
         $('#li1').removeClass("active");
@@ -516,6 +516,7 @@ $(document).ready(function(){
                                     alert(data);
                                 }
                             });
+
 
             $("#pers_info").attr("href", "#tab_1_2");
             $('#li1').removeClass("active");
@@ -1346,7 +1347,7 @@ $("#cost_center").change(function () {
                                                                 <form action="#" class="form-horizontal">
 
                                                                     <div class="form-group">
-                                                                    <label class="col-md-3 control-label">First Name
+                                                                    <label class="col-md-3 control-label">First Name1
                                                                     </label>
                                                                     <div class="col-md-6">
                                                                         <input class="form-control validate_field" placeholder="Enter First Name" type="text" id="fname">
@@ -1561,7 +1562,7 @@ $("#cost_center").change(function () {
                                                                 <div class="row">
                                                                     <div class="col-md-offset-3 col-md-6">
                                                                          <!--<a class="btn green btnNext">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>-->
-                                                                         <a class="btn green" href="#tab_1_2" data-toggle="tab" aria-expanded="false" id="pers_info">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
+                                                                         <a class="btn green"  data-toggle="tab" aria-expanded="false" id="pers_info">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
                                                                         <!--<button type="submit" class="btn green"><a href="#tab_1_2">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a></button>-->
                                                                         <!--<button type="button" class="btn default">Previous&nbsp;&nbsp;<i class="fa fa-angle-double-left" aria-hidden="true"></i></button>-->
                                                                     </div>
@@ -1612,11 +1613,22 @@ $("#cost_center").change(function () {
                                                                     <label class="col-md-3 control-label">Sub-Departments
                                                                     </label>
                                                                     <div class="col-md-6">
-                                                                                <select class="form-control" id="sub_dept">
+                                                                                <!-- <select class="form-control" id="sub_dept">
                                                                                     <option value="">Select</option>
                                                                                     <option value="IT">IT</option>
                                                                                     <option value="Hr">Hr</option>
-                                                                                </select>
+                                                                                </select> -->
+                                                                                 <?php 
+                                                                                 $cluster_name_models = new ClusterForm();
+                                                                                 $cluster_name_model = new EmployeeForm();
+                                                                               
+                                                                                 $records=$cluster_name_model->get_department_list();
+                                                                                 
+                                                                                 $list = CHtml::listData($records,'Department', 'Department'); 
+                                                                                 
+                                                                                    echo CHtml::activeDropDownList($cluster_name_model,'Department',$list,array('id'=>'sub_dept','class'=>'form-control department','options'=>$records,'empty'=>'Select')); 
+                                                                                
+                                                                                 ?>
                                                                                 <span class="help-block"> Select Sub-Departments</span>
                                                                     </div>
                                                                 </div>
