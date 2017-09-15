@@ -322,9 +322,9 @@ class MISController extends Controller
 			'Cost_centre_codes'=>$_POST['cost_center'],
 			'Cost_centre_description'=>$_POST['cost_cenr_descr'],
 			'Employee_status'=>$_POST['emp_sta'],
-			);
+		);
 		//print_r($data);die();
-		$update = Yii::app()->db->createCommand()->update('Employee_master1',$data,'u_id=:u_id',array(':u_id'=>'59a7bb9b35ed6'));
+		$update = Yii::app()->db->createCommand()->update('Employee_master1',$data,'u_id=:u_id',array(':u_id'=>$_POST['u_id']));
 		
 			if($update>0)
 		  	{
@@ -346,6 +346,15 @@ class MISController extends Controller
 		$this->render('//site/admin_footer_view');
 	}
 
+	function actionLoc_req(){
+		$model=new EmployeeMaster2Form;
+		$data = $model->getdata();
+		$selected_option = 'employee_master1';
+		$this->render('//site/script_file');
+		$this->render('//site/admin_header_view',array('selected_option'=>$selected_option));
+		$this->render('//site/employee_details_loc_req',array('model'=>$data));
+		$this->render('//site/admin_footer_view');
+	}
 
 	function actionMis_update($u_id = null){
 		$model=new EmployeeMaster1Form;
@@ -366,6 +375,27 @@ class MISController extends Controller
 		$this->render('//site/session_check_view');
 		$this->render('//site/admin_header_view',array('selected_option'=>$selected_option));
 		$this->render('//site/mis_update',array('employee_data'=>$employee_data));
+		$this->render('//site/admin_footer_view');
+	}
+	function actionMis_update_loc($u_id = null){
+		$model=new EmployeeMaster2Form;
+		$reporting_list = new ClusterForm();
+                
+		$notification_data=new NotificationsForm;
+		$id = $u_id;
+//print_r($id);die();
+		$where = 'where u_id = :u_id';
+		$list = array('u_id');
+		$data = array($id);
+		$employee_data = $model->get_employee_data($where,$data,$list);
+		
+
+		//echo $id;die();
+		$selected_option = 'rules_for_goalsheet';
+	    $this->render('//site/script_file');
+		$this->render('//site/session_check_view');
+		$this->render('//site/admin_header_view',array('selected_option'=>$selected_option));
+		$this->render('//site/mis_update_loc_req',array('employee_data'=>$employee_data));
 		$this->render('//site/admin_footer_view');
 	}
 
@@ -572,6 +602,66 @@ class MISController extends Controller
 		 }
 		 
 	}
+
+	function actionReprtngMgr(){
+		
+		$sap_id=$_POST['rep_sap'];
+		
+		$model=new EmployeeForm;
+		$where = 'where Employee_id = :Employee_id';
+		$list = array('Employee_id');
+		$data = array($_POST['rep_sap']);
+		
+		$employee_data = $model->get_employee_data($where,$data,$list);
+		$reporting_nm = $employee_data['0']['Emp_fname']." ".$employee_data['0']['Emp_lname'];
+		
+
+		$where ='where email_id = :email_id';
+		$list =array('email_id');
+		$data = array($employee_data['0']['Reporting_officer1_id']);
+		$employee_data1 = $model->get_employee_data($where,$data,$list);
+		$reporting_rep = $employee_data1['0']['Emp_fname']." ".$employee_data1['0']['Emp_lname'];
+		$reporting =$reporting_nm."-".$reporting_rep;
+		 print_r($reporting);
+		 
+	}
+
+	function actioncostCenter_change(){
+		$code=$_POST['cost_center'];
+		$model=new CostCenter;
+		$where = 'where cost_center = :cost_center';
+		$list = array('cost_center');
+		$data = array($_POST['cost_center']);
+		$costcenter_data = $model->get_costCenter_data($where,$data,$list);
+		print_r($costcenter_data['0']['cost_center_description']);
+	}
+
+	function actionDesignation_change()
+	{
+		
+		$cluster = new ClusterForm;
+		
+		$cadre =$_POST['grade'];
+		//echo $cadre;die();
+		$records = $cluster->get_list('grade');
+		$cluster_details=$records['0']['grade'];
+        $cluster1=explode(';',$cluster_details);
+
+        $design_list=$cluster->get_list('designation');
+        $emp_desg=$design_list['0']['designation'];
+        $designation_list=explode(';',$emp_desg);
+		
+        for($i=0;$i<count($cluster1);$i++){
+        	if($cluster1[$i]==$cadre){
+        		$desg=explode('^', $designation_list[$i]);
+
+        	}
+        }
+         echo CHtml::activeDropDownList($cluster,'designation',$desg,array('id'=>"desgn",'class'=>'form-control designation','options'=>array('selected'=>true),'empty'=>'Select')); 
+         
+	}
+
+
 }
 
 ?>
