@@ -136,6 +136,7 @@ class MIS_locController extends Controller
 				'Emp_lname'=> $_POST['lname'],
 				'Emp_mname'=> $_POST['mname'],
 				'email'=> $_POST['email'],
+				'contact'=>$_POST['contact'],
 				'Permanent_address'=> $_POST['perm_add'],
 				'Pincode'=> $_POST['pin'],
 				'Basic_qualification'=> $_POST['quali'],
@@ -171,6 +172,7 @@ class MIS_locController extends Controller
 		 $model->Emp_lname = $_POST['lname'];
 		 $model->Emp_mname = $_POST['mname'];
 		 $model->email = $_POST['email'];
+		 $model->contact = $_POST['contact'];
 		 $model->Permanent_address = $_POST['perm_add'];
 		 $model->Pincode = $_POST['pin'];
 		 $model->Basic_qualification = $_POST['quali'];
@@ -247,7 +249,7 @@ class MIS_locController extends Controller
 		 $model->Cost_centre_codes='';
 		 $model->Cost_centre_description='';
 		 $model->Employee_status='';
-		
+		//print_r($model->attributes);die();
 		if($model->save())
 	  	{
 	  		//print_r($model->errors);die();

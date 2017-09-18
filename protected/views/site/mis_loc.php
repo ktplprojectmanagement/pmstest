@@ -93,7 +93,7 @@
  $(function(){
 var d = new Date(2017, 09, 01);
 
-alert(d);
+//alert(d);
 
 
 
@@ -360,7 +360,7 @@ $(document).ready(function(){
         var aadhar_no = $('#aadhar').val();
         var sap =$('#sap').val();
         var u_id=$('#u_id').val();
-
+        var contact = $('#contact').val();
         if($('#fname').val()==""){
             $('#err').text("Please enter first name");
             $('#err').show();
@@ -384,6 +384,12 @@ $(document).ready(function(){
             $('#err').show();
             $('#email').css('border','1px solid red');
             $('#email').focus();
+        }
+        else if($('#contact').val()==""){
+            $('#err').text("Please enter Contact number");
+            $('#err').show();
+            $('#contact').css('border','1px solid red');
+            $('#contact').focus();
         }
         else if($('#perm_add').val()==""){
             $('#err').text("Please enter Permanent Address");
@@ -486,6 +492,7 @@ $(document).ready(function(){
                 lname : lname,
                 mname : mname,
                 email : email,
+                contact:contact,
                 perm_add : perm_add,
                 pin : pin,
                 quali : quali,
@@ -634,10 +641,13 @@ $(document).ready(function(){
     
     $("#reprt_detls").click(function(){
         var report_mgr_sap=$("#report_mgr_sap").val();
-        var rep1_attd = $('option:selected', $('#rep1_attd')).val();
-        var rep1_appr = $('option:selected', $('#rep1_appr')).val();
+        // var rep1_attd = $('option:selected', $('#rep1_attd')).val();
+        // var rep1_appr = $('option:selected', $('#rep1_appr')).val();
+        var rep1_attd = $('#rep1_attd').val();
+        var rep1_appr = $('#rep1_appr').val();
         var dot_mgr = $('option:selected', $('#dot_mgr')).val();
-        var mgr_mgr = $('option:selected', $('#mgr_mgr')).val();
+        //var mgr_mgr = $('option:selected', $('#mgr_mgr')).val();
+        var mgr_mgr = $('#mgr_mgr').val();
         var clust_hd = $('option:selected', $('#clust_hd')).val();
         var u_id=$('#u_id').val();
         if(report_mgr_sap == ""){
@@ -1082,7 +1092,8 @@ $(document).ready(function(){
     });
     
     $('#save_data').click(function(){
-        var cost_center = $('#cost_center').val();
+        //var cost_center = $('#cost_center').val();
+         var cost_center = $('option:selected', $('#cost_center')).val();
         var cost_cenr_descr = $('#cost_cenr_descr').val();
         var emp_sta = $('option:selected', $('#emp_sta')).val();
         var u_id=$('#u_id').val();
@@ -1123,6 +1134,77 @@ $(document).ready(function(){
             });
         }
     });
+
+
+
+
+
+    $('#report_mgr_sap').focusout(function(){
+        //alert("hello");
+        var rep_sap=$('#report_mgr_sap').val();
+        //alert(rep_sap);
+        var rep_mgr_data={
+            rep_sap:rep_sap,
+        };
+        $.ajax({
+                'type' : 'post',
+                'datatype' : 'html',
+                'data' : rep_mgr_data,
+                'url' : base_url+'/kritvapms/index.php/MIS/ReprtngMgr',
+                success : function(data)
+                {
+                    //$("#rep1_attd").val(data);
+                    var report=data.split('-');
+                    $("#rep1_attd").val(report['0']);
+                    $("#rep1_appr").val(report['0']);
+                    $("#mgr_mgr").val(report['1']);
+                    //alert(report);
+                }
+            });
+    });
+
+
+    $("#grade").change(function(){
+                                            var grade = {
+                                                'grade' :$(this).find(':selected').text(),
+                                            };
+                                            //alert($(this).find(':selected').text());
+                                            var base_url = window.location.origin;
+                                            $.ajax({
+                                                'type' : 'post',
+                                                'datatype' : 'html',
+                                                'data' : grade,
+                                                'url' : base_url+'/kritvapms/index.php/MIS/Designation_change',
+                                               
+                                                success : function(data)
+                                                {
+                                                    //alert(data);
+                                                    $('#desgn').html(data);
+                                                }
+                                            });
+                                        }); 
+
+
+
+$("#cost_center").change(function () {
+    var cost_center = {
+                    'cost_center' :$(this).find(':selected').text(),
+                };
+                var base_url = window.location.origin;
+                $.ajax({
+                    'type' : 'post',
+                    'datatype' : 'html',
+                    'data' : cost_center,
+                    'url' : base_url+'/kritvapms/index.php/MIS/costCenter_change',
+                   
+                    success : function(data)
+                    {
+                    
+                        $('#cost_cenr_descr').val(data);
+                    }
+                });
+});
+
 });
   </script>
   <script>
@@ -1158,6 +1240,21 @@ $(document).ready(function(){
                                 $('#err').show();
                                 $(this).css('border','1px solid red');
                                 $("#err").text("Please enter valid email ID");
+                            }
+                            else
+                            {
+                                $("#err").css('display','none');
+                                $(this).css('border','1px solid #999');
+                            }
+                        }
+                         else if(id=='contact'){
+                            var string1 = /^[\d]{10}$/;
+                            if (!string1.test($(this).val())) 
+                            {
+                                $("#err").css('display','block');
+                                $("#err").addClass("alert-danger"); 
+                                $(this).css('border','1px solid red');
+                                $("#err").text("Please enter valid contact number");
                             }
                             else
                             {
@@ -1309,6 +1406,12 @@ $(document).ready(function(){
                                                                             </span>
                                                                             <input class="form-control validate_field" placeholder="Email Address" type="email" id="email"> </div>
                                                                     </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Contact Number</label>
+                                                                    <div class="col-md-6">
+                                                                        <input class="form-control validate_field" placeholder="Enter Contact number" type="email" id="contact"> </div>
+                                                                    
                                                                 </div>
                                                                  <div class="form-group">
                                                                     <label class="col-md-3 control-label">Permanent Address</label>
@@ -1494,7 +1597,7 @@ $(document).ready(function(){
                                                                 <div class="row">
                                                                     <div class="col-md-offset-3 col-md-6">
                                                                          <!--<a class="btn green btnNext">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>-->
-                                                                         <a class="btn green" href="#tab_1_2" data-toggle="tab" aria-expanded="false" id="pers_info">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
+                                                                         <a class="btn green" href="#" data-toggle="tab" aria-expanded="false" id="pers_info">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
                                                                         <!--<button type="submit" class="btn green"><a href="#tab_1_2">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a></button>-->
                                                                         <!--<button type="button" class="btn default">Previous&nbsp;&nbsp;<i class="fa fa-angle-double-left" aria-hidden="true"></i></button>-->
                                                                     </div>
@@ -1704,7 +1807,7 @@ $(document).ready(function(){
                                                                        
                                                                     </div>
                                                                 </div>
-                                                                <div class="form-group">
+                                                               <!--  <div class="form-group">
                                                                     <label class="col-md-3 control-label">Reporting-1 (For Time & Attendance)
                                                                     </label>
                                                                     <div class="col-md-6">
@@ -1732,8 +1835,22 @@ $(document).ready(function(){
                                                                         ?>
                                                                         <span class="help-block"> Select Reporting-1 (For Time & Attendance)</span>
                                                                     </div>
+                                                                </div> -->
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Reporting-1 (For Time & Attendance)</label>
+                                                                    <div class="col-md-6">
+                                                            
+                                                                            <input class="form-control validate_field" placeholder="Enter Reporting-1 (For Time & Attendance)" type="rep1_attd" id="rep1_attd"> </div>
+                                                                   
                                                                 </div>
                                                                 <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Reporting-1 (For appraisal)</label>
+                                                                    <div class="col-md-6">
+
+                                                                            <input class="form-control validate_field" placeholder="Enter Reporting-1 (For appraisal)" type="rep1_appr" id="rep1_appr"> </div>
+                                                                    
+                                                                </div>
+                                                                <!-- <div class="form-group">
                                                                     <label class="col-md-3 control-label">Reporting-1 (For appraisal)
                                                                     </label>
                                                                     <div class="col-md-6">
@@ -1761,7 +1878,7 @@ $(document).ready(function(){
                                                                         ?>
                                                                                 <span class="help-block"> Select Reporting-1 (For appraisal)</span>
                                                                     </div>
-                                                                </div>
+                                                                </div> -->
                                                                 <div class="form-group">
                                                                     <label class="col-md-3 control-label">Dotted Line Manager
                                                                     </label>
@@ -1791,7 +1908,7 @@ $(document).ready(function(){
                                                                                 <span class="help-block"> Select Dotted Line Manager</span>
                                                                     </div>
                                                                 </div>
-                                                                 <div class="form-group">
+                                                                 <!-- <div class="form-group">
                                                                     <label class="col-md-3 control-label">Manager's Manager
                                                                     </label>
                                                                     <div class="col-md-6">
@@ -1819,6 +1936,13 @@ $(document).ready(function(){
                                                                             ?>
                                                                                 <span class="help-block"> Select Manager's Manager</span>
                                                                     </div>
+                                                                </div> -->
+                                                                                                                           <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Manager's Manager</label>
+                                                                    <div class="col-md-6">
+
+                                                                            <input class="form-control validate_field" placeholder="Enter Manager's Manager" type="mgr_mgr" id="mgr_mgr"> </div>
+                                                                    
                                                                 </div>
                                                                  <div class="form-group">
                                                                     <label class="col-md-3 control-label">Cluster Head
@@ -2384,13 +2508,33 @@ $(document).ready(function(){
                                                              <div class="tab-pane" id="tab_1_8">
                                                                  
                                                                  <form action="#" class="form-horizontal">
-                                                                    <div class="form-group">
+<!--                                                                     <div class="form-group">
                                                                     <label class="col-md-3 control-label">Cost Centre Codes</label>
                                                                     <div class="col-md-6">
                                                                         
                                                                         <input class="form-control" placeholder="Enter Cost Centre Codes from 01-April-2016" type="text" id="cost_center">
                                                                     </div>
+                                                                </div> -->
+                                                                 <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Cost Centre Codes</label>
+                                                                    <div class="col-md-6">
+                                                                        
+                                                                         <?php 
+                                                                                 $cluster_name_models = new ClusterForm();
+                                                                                 $costcenter_model = new CostCenter();
+                                                                               
+                                                                                 $records=$costcenter_model->getCodes();
+                                                                                // print_r($records);
+                                                                                 $list = CHtml::listData($records,'cost_center', 'cost_center'); 
+                                                                                 
+                                                                                    echo CHtml::activeDropDownList($costcenter_model,'cost_center',$list,array('id'=>'cost_center','class'=>'form-control cost_center','options'=>$records,'empty'=>'Select')); 
+                                                                                
+                                                                                 ?>
+
+                                                                    </div>
                                                                 </div>
+
+
                                                                 <div class="form-group">
                                                                     <label class="col-md-3 control-label">Cost Centre Description
                                                                     </label>

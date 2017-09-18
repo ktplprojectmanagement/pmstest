@@ -154,21 +154,21 @@ var d = new Date(2017, 09, 01);
 $(document).ready(function(){
     
    
-    // $("#pers_info").click(function(){
-    //      if($('#err').text()==""){
-    //     $('#li1').removeClass("active");
-    //     $('#li2').addClass("active");
-    //     $('#li3').removeClass("active");
-    //     $('#li4').removeClass("active");
-    //     $('#li5').removeClass("active");
-    //     $('#li6').removeClass("active");
-    //     $('#li7').removeClass("active");
-    //     $('#li8').removeClass("active");
-    //     }
-    //     else{
-    //         $("#pers_info").attr("href", "#");
-    //     }
-    // });
+    $("#pers_info").click(function(){
+         if($('#err').text()==""){
+        $('#li1').removeClass("active");
+        $('#li2').addClass("active");
+        $('#li3').removeClass("active");
+        $('#li4').removeClass("active");
+        $('#li5').removeClass("active");
+        $('#li6').removeClass("active");
+        $('#li7').removeClass("active");
+        $('#li8').removeClass("active");
+        }
+        else{
+            $("#pers_info").attr("href", "#");
+        }
+    });
     $("#genrl_info").click(function(){
         if($('#err').text()==""){
         $('#li1').removeClass("active");
@@ -361,6 +361,7 @@ $(document).ready(function(){
         var aadhar_no = $('#aadhar').val();
         var sap =$('#sap').val();
         var u_id=$('#u_id').val();
+        var contact = $('#contact').val();
         if($('#fname').val()==""){
             $('#err').text("Please enter first name");
             $('#err').show();
@@ -384,6 +385,12 @@ $(document).ready(function(){
             $('#err').show();
             $('#email').css('border','1px solid red');
             $('#email').focus();
+        }
+        else if($('#contact').val()==""){
+            $('#err').text("Please enter Contact number");
+            $('#err').show();
+            $('#contact').css('border','1px solid red');
+            $('#contact').focus();
         }
         else if($('#perm_add').val()==""){
             $('#err').text("Please enter Permanent Address");
@@ -416,13 +423,13 @@ $(document).ready(function(){
             $('#quali').focus();
         }
         else if(mar_stat == ""){
-            $('#err').text("Please select Gender");
+            $('#err').text("Please select Marital Status");
             $('#err').show();
             $('#marital_stat').css('border','1px solid red');
             $('#marital_stat').focus();
         }
         else if(no_of_depend ==""){
-            $('#err').text("Please select Gender");
+            $('#err').text("Please select No of Dependents");
             $('#err').show();
             $('#no_of_depend').css('border','1px solid red');
             $('#no_of_depend').focus();
@@ -434,25 +441,25 @@ $(document).ready(function(){
             $('#bld_grp').focus();
         }
         else if($('#pan').val()==""){
-            $('#err').text("Please enter Basic qualification");
+            $('#err').text("Please enter Pan Card number");
             $('#err').show();
             $('#pan').css('border','1px solid red');
             $('#pan').focus();
         }
         else if($('#dob').val()==""){
-            $('#err').text("Please enter Basic qualification");
+            $('#err').text("Please enter Date of Birth");
             $('#err').show();
             $('#dob').css('border','1px solid red');
             $('#dob').focus();
         }
         else if($('#age_yrs').val()==""){
-            $('#err').text("Please enter Basic qualification");
+            $('#err').text("Please Age in Years");
             $('#err').show();
             $('#age_yrs').css('border','1px solid red');
             $('#age_yrs').focus();
         }
         else if($('#age_mnt').val()==""){
-            $('#err').text("Please enter Basic qualification");
+            $('#err').text("Please Age in Months");
             $('#err').show();
             $('#age_mnt').css('border','1px solid red');
             $('#age_mnt').focus();
@@ -486,6 +493,7 @@ $(document).ready(function(){
                 lname : lname,
                 mname : mname,
                 email : email,
+                contact:contact,
                 perm_add : perm_add,
                 pin : pin,
                 quali : quali,
@@ -518,15 +526,15 @@ $(document).ready(function(){
                             });
 
 
-            $("#pers_info").attr("href", "#tab_1_2");
-            $('#li1').removeClass("active");
-            $('#li2').addClass("active");
-            $('#li3').removeClass("active");
-            $('#li4').removeClass("active");
-            $('#li5').removeClass("active");
-            $('#li6').removeClass("active");
-            $('#li7').removeClass("active");
-            $('#li8').removeClass("active");
+                    $("#pers_info").attr("href", "#tab_1_2");
+                    $('#li1').removeClass("active");
+                    $('#li2').addClass("active");
+                    $('#li3').removeClass("active");
+                    $('#li4').removeClass("active");
+                    $('#li5').removeClass("active");
+                    $('#li6').removeClass("active");
+                    $('#li7').removeClass("active");
+                    $('#li8').removeClass("active");
         }
     });
     $('#genrl_info').click(function(){
@@ -604,6 +612,10 @@ $(document).ready(function(){
             $('#clust_nm').focus();
         }
         else{
+
+            $('#err').text("");
+            $('#err').hide();
+
             var genrl_detls={
                 pos_code : pos_code,
                 desgn:desgn,
@@ -627,7 +639,17 @@ $(document).ready(function(){
                         alert(data);
                     }
                 });
-            //alert(base_url+'/kritvapms/index.php/MIS/genrl_info');
+
+            $("#genrl_info").attr("href", "#tab_1_3");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').addClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').removeClass("active");
+            
         }
         
     });
@@ -698,6 +720,16 @@ $(document).ready(function(){
                         alert(data);
                     }
                 });
+
+            $("#reprt_detls").attr("href", "#tab_1_4");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').addClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').removeClass("active");
         }
     });
     
@@ -838,12 +870,24 @@ $(document).ready(function(){
                     alert(data);
                 }
             }); 
+
+            $("#join_detals").attr("href", "#tab_1_5");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').addClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').removeClass("active");
+
+
         }
     });
 
     $("#promo_detals").click(function(){
         var promo_dt = $('#promo_dt').val();
-        var desgn_bfr_promo = $('option:selected', $('#desgn_bfr_promo')).val();
+        var degn_bfr_promo = $('option:selected', $('#desg_bfr_promo')).val();
         var cdre_bfr_promo = $('option:selected', $('#cdre_bfr_promo')).val();
         var prev_cadre = $('option:selected', $('#prev_cadre')).val();
         var redesgn_dt = $('#redesgn_dt').val();
@@ -903,7 +947,7 @@ $(document).ready(function(){
                 $('#desgn_bfr_promo').focus();
             }
             else{
-            //alert("hi");
+           
             $('#err').text("");
             $('#err').hide();
         }
@@ -934,6 +978,16 @@ $(document).ready(function(){
                     alert(data);
                 }
             });
+
+            $("#promo_detals").attr("href", "#tab_1_6");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').addClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').removeClass("active");
         }
     });
 
@@ -1002,6 +1056,17 @@ $(document).ready(function(){
                     alert(data);
                 }
             });
+
+            $("#trans_dtls").attr("href", "#tab_1_7");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').addClass("active");
+            $('#li8').removeClass("active");
+
         }
     });
 
@@ -1077,6 +1142,16 @@ $(document).ready(function(){
                         alert(data);
                     }
                 });
+
+            $("#leave_dtls").attr("href", "#tab_1_8");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').addClass("active");
            }
 
     });
@@ -1235,6 +1310,21 @@ $("#cost_center").change(function () {
                                 $(this).css('border','1px solid #999');
                             }
                         }
+                        else if(id=='contact'){
+                            var string1 = /^[\d]{10}$/;
+                            if (!string1.test($(this).val())) 
+                            {
+                                $("#err").css('display','block');
+                                $("#err").addClass("alert-danger"); 
+                                $(this).css('border','1px solid red');
+                                $("#error_value").text("Please enter valid contact number");
+                            }
+                            else
+                            {
+                                $("#err").css('display','none');
+                                $(this).css('border','1px solid #999');
+                            }
+                        }
                         else if(id=='pin'){
                             //alert(id);
 
@@ -1377,6 +1467,12 @@ $("#cost_center").change(function () {
                                                                             </span>
                                                                             <input class="form-control validate_field" placeholder="Email Address" type="email" id="email"> </div>
                                                                     </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Contact Number</label>
+                                                                    <div class="col-md-6">
+                                                                        <input class="form-control validate_field" placeholder="Enter Contact number" type="email" id="contact"> </div>
+                                                                    
                                                                 </div>
                                                                  <div class="form-group">
                                                                     <label class="col-md-3 control-label">Permanent Address</label>

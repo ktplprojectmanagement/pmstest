@@ -575,10 +575,15 @@ $(document).ready(function(){
     
     $("#reprt_detls").click(function(){
         var report_mgr_sap=$("#report_mgr_sap").val();
-        var rep1_attd = $('option:selected', $('#rep1_attd')).val();
-        var rep1_appr = $('option:selected', $('#rep1_appr')).val();
+        // var rep1_attd = $('option:selected', $('#rep1_attd')).val();
+        // var rep1_appr = $('option:selected', $('#rep1_appr')).val();
+        // var dot_mgr = $('option:selected', $('#dot_mgr')).val();
+        // var mgr_mgr = $('option:selected', $('#mgr_mgr')).val();
+        var rep1_attd = $('#rep1_attd').val();
+        var rep1_appr = $('#rep1_appr').val();
         var dot_mgr = $('option:selected', $('#dot_mgr')).val();
-        var mgr_mgr = $('option:selected', $('#mgr_mgr')).val();
+        // var mgr_mgr = $('option:selected', $('#mgr_mgr')).val();
+        var mgr_mgr =  $('#mgr_mgr').val();
         var clust_hd = $('option:selected', $('#clust_hd')).val();
         var u_id=$('#u_id').val();
         if(report_mgr_sap == ""){
@@ -1106,10 +1111,13 @@ $(document).ready(function(){
         var loc_pay= $('option:selected', $('#loc_pay')).val();
         var cluster= $('option:selected', $('#clust_nm')).val();
         var report_mgr_sap=$("#report_mgr_sap").val();
-        var rep1_attd = $('option:selected', $('#rep1_attd')).val();
-        var rep1_appr = $('option:selected', $('#rep1_appr')).val();
+        // var rep1_attd = $('option:selected', $('#rep1_attd')).val();
+        // var rep1_appr = $('option:selected', $('#rep1_appr')).val();
+        var rep1_attd = $('#rep1_attd').val();
+        var rep1_appr = $('#rep1_appr').val();
         var dot_mgr = $('option:selected', $('#dot_mgr')).val();
-        var mgr_mgr = $('option:selected', $('#mgr_mgr')).val();
+        // var mgr_mgr = $('option:selected', $('#mgr_mgr')).val();
+        var mgr_mgr =  $('#mgr_mgr').val();
         var clust_hd = $('option:selected', $('#clust_hd')).val();
         var trainee = $('option:selected', $('#trainee')).val();
         var trn_dept = $('option:selected', $('#trn_dept')).val();
