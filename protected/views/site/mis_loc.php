@@ -153,111 +153,111 @@ var d = new Date(2017, 09, 01);
 $(document).ready(function(){
     
    
-    $("#pers_info").click(function(){
-         if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').addClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#pers_info").attr("href", "#");
-        }
-    });
-    $("#genrl_info").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').addClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#genrl_info").attr("href", "#");
-        }
-    });
-    $("#reprt_detls").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').addClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#reprt_detls").attr("href", "#");
-        }
-    });
-    $("#join_detals").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').addClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#join_detals").attr("href", "#");
-        }
-    });
-    $("#promo_detals").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').addClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#promo_detals").attr("href", "#");
-        }
-    });
-    $("#trans_dtls").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').addClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#trans_dtls").attr("href", "#");
-        }
-    });
-    $("#leave_dtls").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').addClass("active");
-        }
-        else{
-            $("#leave_dtls").attr("href", "#");
-        }
-    });
+    // $("#pers_info").click(function(){
+    //      if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').addClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#pers_info").attr("href", "#");
+    //     }
+    // });
+    // $("#genrl_info").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').addClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#genrl_info").attr("href", "#");
+    //     }
+    // });
+    // $("#reprt_detls").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').addClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#reprt_detls").attr("href", "#");
+    //     }
+    // });
+    // $("#join_detals").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').addClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#join_detals").attr("href", "#");
+    //     }
+    // });
+    // $("#promo_detals").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').addClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#promo_detals").attr("href", "#");
+    //     }
+    // });
+    // $("#trans_dtls").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').addClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#trans_dtls").attr("href", "#");
+    //     }
+    // });
+    // $("#leave_dtls").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').addClass("active");
+    //     }
+    //     else{
+    //         $("#leave_dtls").attr("href", "#");
+    //     }
+    // });
     
     $("#prve1").click(function(){
         $('#li1').addClass("active");
@@ -634,6 +634,15 @@ $(document).ready(function(){
                         alert(data);
                     }
                 });
+            $("#genrl_info").attr("href", "#tab_1_3");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').addClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').removeClass("active");
             //alert(base_url+'/kritvapms/index.php/MIS_loc/genrl_info');
         }
         
@@ -708,7 +717,18 @@ $(document).ready(function(){
                         alert(data);
                     }
                 });
-        }
+
+         
+        $('#li1').removeClass("active");
+        $('#li2').removeClass("active");
+        $('#li3').removeClass("active");
+        $('#li4').addClass("active");
+        $('#li5').removeClass("active");
+        $('#li6').removeClass("active");
+        $('#li7').removeClass("active");
+        $('#li8').removeClass("active");
+        $("#reprt_detls").attr("href", "#tab_1_4");
+        
     });
     
     $("#join_detals").click(function(){
@@ -848,12 +868,22 @@ $(document).ready(function(){
                     alert(data);
                 }
             }); 
+
+        $('#li1').removeClass("active");
+        $('#li2').removeClass("active");
+        $('#li3').removeClass("active");
+        $('#li4').removeClass("active");
+        $('#li5').addClass("active");
+        $('#li6').removeClass("active");
+        $('#li7').removeClass("active");
+        $('#li8').removeClass("active");
+        $("#join_detals").attr("href", "#tab_1_5");
         }
     });
 
     $("#promo_detals").click(function(){
         var promo_dt = $('#promo_dt').val();
-        var desgn_bfr_promo = $('option:selected', $('#desgn_bfr_promo')).val();
+        //var desgn_bfr_promo = $('option:selected', $('#desgn_bfr_promo')).val();
         var cdre_bfr_promo = $('option:selected', $('#cdre_bfr_promo')).val();
         var prev_cadre = $('option:selected', $('#prev_cadre')).val();
         var redesgn_dt = $('#redesgn_dt').val();
@@ -861,7 +891,7 @@ $(document).ready(function(){
         var desg_bfr_redesgn = $('option:selected', $('#desg_bfr_redesgn')).val();
         var cdr_bfr_redesgn = $('option:selected', $('#cdr_bfr_redesgn')).val();
         var grd_bfr_redgn = $('option:selected', $('#grd_bfr_redgn')).val();
-        var desgn_bfr_promo = $('option:selected', $('#desg_bfr_promo')).val();
+        var desgn_bfr_promo = $('option:selected', $('#desgn_bfr_promo')).val();
         var u_id=$('#u_id').val();
         if(promo_dt!= ""){
             if(desg_bfr_promo == ""){
@@ -944,6 +974,16 @@ $(document).ready(function(){
                     alert(data);
                 }
             });
+
+        $('#li1').removeClass("active");
+        $('#li2').removeClass("active");
+        $('#li3').removeClass("active");
+        $('#li4').removeClass("active");
+        $('#li5').removeClass("active");
+        $('#li6').addClass("active");
+        $('#li7').removeClass("active");
+        $('#li8').removeClass("active");
+        $("#promo_detals").attr("href", "#tab_1_6");
         }
     });
 
@@ -1012,6 +1052,15 @@ $(document).ready(function(){
                     alert(data);
                 }
             });
+        $('#li1').removeClass("active");
+        $('#li2').removeClass("active");
+        $('#li3').removeClass("active");
+        $('#li4').removeClass("active");
+        $('#li5').removeClass("active");
+        $('#li6').removeClass("active");
+        $('#li7').addClass("active");
+        $('#li8').removeClass("active");
+        $("#trans_dtls").attr("href", "#tab_1_7");
         }
     });
 
@@ -1132,6 +1181,16 @@ $(document).ready(function(){
                     alert(data);
                 }
             });
+
+        $('#li1').removeClass("active");
+        $('#li2').removeClass("active");
+        $('#li3').removeClass("active");
+        $('#li4').removeClass("active");
+        $('#li5').removeClass("active");
+        $('#li6').removeClass("active");
+        $('#li7').removeClass("active");
+        $('#li8').addClass("active");
+        $("#save_data").attr("href", "#tab_1_8");
         }
     });
 
@@ -1978,7 +2037,7 @@ $("#cost_center").change(function () {
                                                             <div class="form-actions">
                                                                 <div class="row">
                                                                     <div class="col-md-offset-3 col-md-6">
-                                                                        <a class="btn green" href="#tab_1_4" data-toggle="tab" aria-expanded="false" id="reprt_detls">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
+                                                                        <a class="btn green" href="#" data-toggle="tab" aria-expanded="false" id="reprt_detls">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
                                                                         <a class="btn default" href="#tab_1_2" data-toggle="tab" aria-expanded="false" id="prve2">Previous&nbsp;&nbsp;<i class="fa fa-angle-double-left" aria-hidden="true" ></i></a>
                                                                     </div>
                                                                 </div>
@@ -2563,6 +2622,8 @@ $("#cost_center").change(function () {
                                                                     <!--    <a class="btn green" href="#tab_1_8" data-toggle="tab" aria-expanded="false" id="trans_dtls">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>-->
                                                                         <a class="btn green" href="#" data-toggle="tab" aria-expanded="false" id="save_data">Save&nbsp;&nbsp;</a>
                                                                         <a class="btn default" href="#tab_1_7" data-toggle="tab" aria-expanded="false" id="prve7">Previous&nbsp;&nbsp;<i class="fa fa-angle-double-left" aria-hidden="true" ></i></a>
+                                                                        <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal" id="final_Apprv">Final Approve</button>
+                                                                       <!--  <a class="btn default"  data-toggle="tab" aria-expanded="false" id="final_Apprv">Final Approve&nbsp;&nbsp;</a> -->
                                                                     </div>
                                                                 </div>
                                                                 
@@ -2571,3 +2632,69 @@ $("#cost_center").change(function () {
                                                              </div>
                                                             <!-- End other details Tab-->
                                                             </div></div></div></div></div></div></div></div></div></div>
+
+
+
+
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Confirmation</h4>
+        </div>
+        <div class="modal-body">
+           <p> Are you sure you want to send this for approval?
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="btn dark btn-outline">Edit</button>
+          <button type="button" data-dismiss="modal" class="btn green" id="continue_goal_set1">OK</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+<script type="text/javascript">
+$(function(){
+$("body").on('click','#final_Apprv',function(){
+    $("body").on('click','#continue_goal_set1',function(){
+       var data = {
+                'u_id' : $("#u_id").val(),
+                  };
+                                    console.log(data);
+                                    var base_url = window.location.origin;
+                                    $.ajax({                            
+                                        type : 'post',
+                                        datatype : 'html',
+                                        data : data,
+                                        url : base_url+'/kritvapms/index.php/MIS_loc/location_submit',
+                                        
+                                        success : function(data)
+                                        {   
+alert(data);
+                                           if(data=="Notification Send"){
+                                           
+                                                    $("#err").show();
+                                                    $("#err").fadeOut(6000);
+                                                     $("#err").removeClass('alert-danger');
+                                                     $("#err").addClass('alert-success');
+                                                     $("#err").text("Notification Send");
+                                            }
+                                        }
+
+                                });
+        });
+});
+});
+</script>

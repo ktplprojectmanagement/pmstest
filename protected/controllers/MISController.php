@@ -251,7 +251,7 @@ class MISController extends Controller
 		$data = array(
 
 			'Promotion_date'=>$_POST['promo_dt'],
-			'Designation_before_promotion'=>$_POST['degn_bfr_promo'],
+			'Designation_before_promotion'=>$_POST['desg_bfr_promo'],
 			'Cadre_before_promotion'=>$_POST['cdre_bfr_promo'],
 			'Previous_grade'=>$_POST['prev_cadre'],
 			'Redesignation_date'=>$_POST['redesgn_dt'],

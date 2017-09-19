@@ -499,6 +499,7 @@ class MIS_locController extends Controller
 				'Emp_lname'=> $_POST['lname'],
 				'Emp_mname'=> $_POST['mname'],
 				'email'=> $_POST['email'],
+				'contact'=>$_POST['contact'],
 				'Permanent_address'=> $_POST['perm_add'],
 				'Pincode'=> $_POST['pin'],
 				'Basic_qualification'=> $_POST['quali'],
@@ -595,6 +596,7 @@ class MIS_locController extends Controller
 		 $model->Emp_lname = $_POST['lname'];
 		 $model->Emp_mname = $_POST['mname'];
 		 $model->email = $_POST['email'];
+		 $model->contact = $_POST['contact'];
 		 $model->Permanent_address = $_POST['perm_add'];
 		 $model->Pincode = $_POST['pin'];
 		 $model->Basic_qualification = $_POST['quali'];
@@ -686,6 +688,35 @@ class MIS_locController extends Controller
 		 }
 		 
 	}
+
+
+
+		function actionlocation_submit()
+{
+	echo"hiiiiiiiiiiiiiii";die();
+		IsSMTP();
+		$mailer->IsHTML(true);
+		$mailer->SMTPAuth = true;
+		$mailer->SMTPSecure = "ssl";
+		$mailer->Host = "smtp.gmail.com";
+		$mailer->Port = 465;
+		$mailer->Username = "demo.appraisel@gmail.com";
+		$mailer->Password = "appraisel@123";
+		$mailer->From = "employee.kritva@gmail.com";
+		$mailer->FromName = "Test";
+		$mailer->AddAddress("employee.kritva@gmail.com");
+		$mailer->Subject = "Someone sent you an email.";
+		$mailer->Body = "Hi, This is just a test email using PHP Mailer and Yii Framework.";
+		if (!$mailer->Send())
+		{
+		    echo "Message sent successfully!";
+		}
+		else 
+		{
+		    echo "Fail to send your message!";
+		}
+}
+
 }
 
 ?>

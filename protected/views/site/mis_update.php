@@ -114,111 +114,111 @@
 $(document).ready(function(){
     
    
-    $("#pers_info").click(function(){
-         if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').addClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#pers_info").attr("href", "#");
-        }
-    });
-    $("#genrl_info").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').addClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#genrl_info").attr("href", "#");
-        }
-    });
-    $("#reprt_detls").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').addClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#reprt_detls").attr("href", "#");
-        }
-    });
-    $("#join_detals").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').addClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#join_detals").attr("href", "#");
-        }
-    });
-    $("#promo_detals").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').addClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#promo_detals").attr("href", "#");
-        }
-    });
-    $("#trans_dtls").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').addClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#trans_dtls").attr("href", "#");
-        }
-    });
-    $("#leave_dtls").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').addClass("active");
-        }
-        else{
-            $("#leave_dtls").attr("href", "#");
-        }
-    });
+    // $("#pers_info").click(function(){
+    //      if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').addClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#pers_info").attr("href", "#");
+    //     }
+    // });
+    // $("#genrl_info").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').addClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#genrl_info").attr("href", "#");
+    //     }
+    // });
+    // $("#reprt_detls").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').addClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#reprt_detls").attr("href", "#");
+    //     }
+    // });
+    // $("#join_detals").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').addClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#join_detals").attr("href", "#");
+    //     }
+    // });
+    // $("#promo_detals").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').addClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#promo_detals").attr("href", "#");
+    //     }
+    // });
+    // $("#trans_dtls").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').addClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#trans_dtls").attr("href", "#");
+    //     }
+    // });
+    // $("#leave_dtls").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').addClass("active");
+    //     }
+    //     else{
+    //         $("#leave_dtls").attr("href", "#");
+    //     }
+    // });
     
     $("#prve1").click(function(){
         $('#li1').addClass("active");
@@ -593,7 +593,15 @@ $(document).ready(function(){
                         alert(data);
                     }
                 });
-           
+           $("#genrl_info").attr("href", "#tab_1_3");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').addClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').removeClass("active");
         }
         
     });
@@ -671,13 +679,13 @@ $(document).ready(function(){
                 });
             $("#reprt_detls").attr("href", "#tab_1_4");
             $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').addClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').addClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').removeClass("active");
         }
     });
     
@@ -818,6 +826,16 @@ $(document).ready(function(){
                     alert(data);
                 }
             }); 
+            $("#join_detals").attr("href", "#tab_1_5");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').addClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').removeClass("active");
+
         }
     });
 
@@ -914,6 +932,15 @@ $(document).ready(function(){
                     alert(data);
                 }
             });
+                $("#promo_detals").attr("href", "#tab_1_6");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').addClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').removeClass("active");
         }
     });
 
@@ -981,6 +1008,15 @@ $(document).ready(function(){
                     alert(data);
                 }
             });
+            $("#trans_dtls").attr("href", "#tab_1_7");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').addClass("active");
+            $('#li8').removeClass("active");
         }
     });
 
@@ -1058,6 +1094,16 @@ $(document).ready(function(){
                         alert(data);
                     }
                 });
+
+            $("#leave_dtls").attr("href", "#tab_1_8");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').addClass("active");
            }
                 // var leave_details = {
                 //     dt_retire : dt_retire,
@@ -1754,7 +1800,7 @@ var d = new Date(2017, 09, 01);
                                                                 <div class="row">
                                                                     <div class="col-md-offset-3 col-md-6">
                                                                          <!--<a class="btn green btnNext">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>-->
-                                                                         <a class="btn green" href="#tab_1_2" data-toggle="tab" aria-expanded="false" id="pers_info">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
+                                                                         <a class="btn green" href="#" data-toggle="tab" aria-expanded="false" id="pers_info">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
                                                                         <!--<button type="submit" class="btn green"><a href="#tab_1_2">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a></button>-->
                                                                         <!--<button type="button" class="btn default">Previous&nbsp;&nbsp;<i class="fa fa-angle-double-left" aria-hidden="true"></i></button>-->
                                                                     </div>
@@ -2067,7 +2113,7 @@ var d = new Date(2017, 09, 01);
                                                             <div class="form-actions">
                                                                 <div class="row">
                                                                     <div class="col-md-offset-3 col-md-6">
-                                                                        <a class="btn green" href="#tab_1_3" data-toggle="tab" aria-expanded="false" id="genrl_info">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
+                                                                        <a class="btn green" href="#" data-toggle="tab" aria-expanded="false" id="genrl_info">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
                                                                         <a class="btn default" href="#tab_1_1" data-toggle="tab" aria-expanded="false" id="prve1">Previous&nbsp;&nbsp;<i class="fa fa-angle-double-left" aria-hidden="true" ></i></a>
                                                                     </div>
                                                                 </div>
@@ -2485,7 +2531,7 @@ $reporting_list = new EmployeeForm();
                                                             <div class="form-actions">
                                                                 <div class="row">
                                                                     <div class="col-md-offset-3 col-md-6">
-                                                                        <a class="btn green" href="#tab_1_4" data-toggle="tab" aria-expanded="false" id="reprt_detls">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
+                                                                        <a class="btn green" href="#" data-toggle="tab" aria-expanded="false" id="reprt_detls">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
                                                                         <a class="btn default" href="#tab_1_2" data-toggle="tab" aria-expanded="false" id="prve2">Previous&nbsp;&nbsp;<i class="fa fa-angle-double-left" aria-hidden="true" ></i></a>
                                                                     </div>
                                                                 </div>
@@ -2705,7 +2751,7 @@ $reporting_list = new EmployeeForm();
                                                                  <div class="form-actions">
                                                                 <div class="row">
                                                                     <div class="col-md-offset-3 col-md-6">
-                                                                        <a class="btn green" href="#tab_1_5" data-toggle="tab" aria-expanded="false" id="join_detals">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
+                                                                        <a class="btn green" href="#" data-toggle="tab" aria-expanded="false" id="join_detals">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
                                                                         <a class="btn default" href="#tab_1_3" data-toggle="tab" aria-expanded="false" id="prve3">Previous&nbsp;&nbsp;<i class="fa fa-angle-double-left" aria-hidden="true" ></i></a>
                                                                     </div>
                                                                 </div>
@@ -2893,7 +2939,7 @@ $reporting_list = new EmployeeForm();
                                                                  <div class="form-actions">
                                                                 <div class="row">
                                                                     <div class="col-md-offset-3 col-md-6">
-                                                                        <a class="btn green" href="#tab_1_6" data-toggle="tab" aria-expanded="false" id="promo_detals">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
+                                                                        <a class="btn green" href="#" data-toggle="tab" aria-expanded="false" id="promo_detals">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
                                                                         <a class="btn default" href="#tab_1_4" data-toggle="tab" aria-expanded="false" id="prve4">Previous&nbsp;&nbsp;<i class="fa fa-angle-double-left" aria-hidden="true" ></i></a>
                                                                     </div>
                                                                 </div>
@@ -3056,7 +3102,7 @@ $reporting_list = new EmployeeForm();
                                                                  <div class="form-actions">
                                                                 <div class="row">
                                                                     <div class="col-md-offset-3 col-md-6">
-                                                                        <a class="btn green" href="#tab_1_7" data-toggle="tab" aria-expanded="false" id="trans_dtls">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
+                                                                        <a class="btn green" href="#" data-toggle="tab" aria-expanded="false" id="trans_dtls">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
                                                                         <a class="btn default" href="#tab_1_5" data-toggle="tab" aria-expanded="false" id="prve5">Previous&nbsp;&nbsp;<i class="fa fa-angle-double-left" aria-hidden="true" ></i></a>
                                                                     </div>
                                                                 </div>
@@ -3183,7 +3229,7 @@ $reporting_list = new EmployeeForm();
                                                                  <div class="form-actions">
                                                                 <div class="row">
                                                                     <div class="col-md-offset-3 col-md-6">
-                                                                        <a class="btn green" href="#tab_1_8" data-toggle="tab" aria-expanded="false" id="leave_dtls">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
+                                                                        <a class="btn green" href="#" data-toggle="tab" aria-expanded="false" id="leave_dtls">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" ></i></a>
                                                                         <a class="btn default" href="#tab_1_6" data-toggle="tab" aria-expanded="false" id="prve6">Previous&nbsp;&nbsp;<i class="fa fa-angle-double-left" aria-hidden="true" ></i></a>
                                                                     </div>
                                                                 </div>

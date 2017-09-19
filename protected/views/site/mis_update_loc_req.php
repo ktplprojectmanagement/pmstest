@@ -98,111 +98,111 @@ $('#dob').val(newdate);
 $(document).ready(function(){
     
    
-    $("#pers_info").click(function(){
-         if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').addClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#pers_info").attr("href", "#");
-        }
-    });
-    $("#genrl_info").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').addClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#genrl_info").attr("href", "#");
-        }
-    });
-    $("#reprt_detls").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').addClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#reprt_detls").attr("href", "#");
-        }
-    });
-    $("#join_detals").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').addClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#join_detals").attr("href", "#");
-        }
-    });
-    $("#promo_detals").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').addClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#promo_detals").attr("href", "#");
-        }
-    });
-    $("#trans_dtls").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').addClass("active");
-        $('#li8').removeClass("active");
-        }
-        else{
-            $("#trans_dtls").attr("href", "#");
-        }
-    });
-    $("#leave_dtls").click(function(){
-        if($('#err').text()==""){
-        $('#li1').removeClass("active");
-        $('#li2').removeClass("active");
-        $('#li3').removeClass("active");
-        $('#li4').removeClass("active");
-        $('#li5').removeClass("active");
-        $('#li6').removeClass("active");
-        $('#li7').removeClass("active");
-        $('#li8').addClass("active");
-        }
-        else{
-            $("#leave_dtls").attr("href", "#");
-        }
-    });
+    // $("#pers_info").click(function(){
+    //      if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').addClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#pers_info").attr("href", "#");
+    //     }
+    // });
+    // $("#genrl_info").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').addClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#genrl_info").attr("href", "#");
+    //     }
+    // });
+    // $("#reprt_detls").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').addClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#reprt_detls").attr("href", "#");
+    //     }
+    // });
+    // $("#join_detals").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').addClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#join_detals").attr("href", "#");
+    //     }
+    // });
+    // $("#promo_detals").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').addClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#promo_detals").attr("href", "#");
+    //     }
+    // });
+    // $("#trans_dtls").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').addClass("active");
+    //     $('#li8').removeClass("active");
+    //     }
+    //     else{
+    //         $("#trans_dtls").attr("href", "#");
+    //     }
+    // });
+    // $("#leave_dtls").click(function(){
+    //     if($('#err').text()==""){
+    //     $('#li1').removeClass("active");
+    //     $('#li2').removeClass("active");
+    //     $('#li3').removeClass("active");
+    //     $('#li4').removeClass("active");
+    //     $('#li5').removeClass("active");
+    //     $('#li6').removeClass("active");
+    //     $('#li7').removeClass("active");
+    //     $('#li8').addClass("active");
+    //     }
+    //     else{
+    //         $("#leave_dtls").attr("href", "#");
+    //     }
+    // });
     
     $("#prve1").click(function(){
         $('#li1').addClass("active");
@@ -576,6 +576,15 @@ $(document).ready(function(){
                         alert(data);
                     }
                 });
+            $("#genrl_info").attr("href", "#tab_1_3");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').addClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').removeClass("active");
             //alert(base_url+'/kritvapms/index.php/MIS/genrl_info');
         }
         
@@ -647,6 +656,17 @@ $(document).ready(function(){
                         alert(data);
                     }
                 });
+
+
+            $("#reprt_detls").attr("href", "#tab_1_4");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').addClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').removeClass("active");
         }
     });
     
@@ -787,6 +807,16 @@ $(document).ready(function(){
                     alert(data);
                 }
             }); 
+
+            $("#join_detals").attr("href", "#tab_1_5");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').addClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').removeClass("active");
         }
     });
 
@@ -883,6 +913,15 @@ $(document).ready(function(){
                     alert(data);
                 }
             });
+            $("#promo_detals").attr("href", "#tab_1_6");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').addClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').removeClass("active");
         }
     });
 
@@ -950,6 +989,16 @@ $(document).ready(function(){
                     alert(data);
                 }
             });
+
+            $("#trans_dtls").attr("href", "#tab_1_7");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').addClass("active");
+            $('#li8').removeClass("active");
         }
     });
 
@@ -1027,6 +1076,16 @@ $(document).ready(function(){
                         alert(data);
                     }
                 });
+                $("#leave_dtls").attr("href", "#tab_1_8");
+            $('#li1').removeClass("active");
+            $('#li2').removeClass("active");
+            $('#li3').removeClass("active");
+            $('#li4').removeClass("active");
+            $('#li5').removeClass("active");
+            $('#li6').removeClass("active");
+            $('#li7').removeClass("active");
+            $('#li8').addClass("active");
+
            }
                
     });
